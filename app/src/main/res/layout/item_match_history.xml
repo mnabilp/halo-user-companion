@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,36 +8,77 @@
     android:padding="8dp">
 
     <ImageView
-        android:id="@+id/img_item_photo"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:id="@+id/iv_profile"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:background="@drawable/ic_spartan_profile"
         android:layout_marginTop="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"/>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/img_item_photo"
-        android:layout_toEndOf="@id/img_item_photo"
+        android:layout_toEndOf="@id/iv_profile"
         android:layout_centerVertical="true"
         android:orientation="vertical">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_item_name"
-            android:layout_width="match_parent"
+            android:id="@+id/home_activity_text1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Pepaya"
-            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="@string/kills"
+            android:textColor="@color/colorWhite"
             android:textSize="16sp"
-            android:layout_marginBottom="8dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_item_composition"
-            android:layout_width="match_parent"
+            android:id="@+id/home_activity_text3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Vitamin C dan Provitamin A"/>
-    </LinearLayout>
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="@string/deaths"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/home_activity_text1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_match_kill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="@string/_31"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/home_activity_text1"
+            app:layout_constraintStart_toStartOf="@id/home_activity_text1"
+            app:layout_constraintTop_toBottomOf="@id/home_activity_text1" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_match_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="@string/_1021"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/home_activity_text3"
+            app:layout_constraintStart_toStartOf="@id/home_activity_text3"
+            app:layout_constraintTop_toBottomOf="@id/home_activity_text3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>

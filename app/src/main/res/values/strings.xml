@@ -50,4 +50,23 @@
     <string name="home_text1">According to all known laws of avi...</string>
     <string name="home_text2">there is no way a bee should be...</string>
     <string name="home_text3">Its wings are too small to...</string>
+    <string name="username">Username</string>
+    <string name="konenhizer">Konenhizer</string>
+    <string name="id">ID</string>
+    <string name="_1910511106">1910511106</string>
+    <string name="region">Region</string>
+    <string name="asia">Asia</string>
+    <string name="halo_4_is_out_on_pc">Halo 4 is Out On PC</string>
+    <string name="minor_bug_fixes">Minor Bug Fixes</string>
+    <string name="upcoming_maps">Upcoming Maps</string>
+    <string name="online_friends">Online Friends</string>
+    <string name="active_users">Active Users</string>
+    <string name="new_posts">New Posts</string>
+    <string name="_31">31</string>
+    <string name="_62127">62127</string>
+    <string name="_1021">1021</string>
+    <string name="kills">Kills</string>
+    <string name="deaths">Deaths</string>
+    <string name="_31">31</string>
+    <string name="_1021">1021</string>
 </resources>

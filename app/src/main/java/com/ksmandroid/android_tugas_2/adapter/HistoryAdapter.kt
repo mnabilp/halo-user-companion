@@ -1,53 +1,30 @@
 package com.ksmandroid.android_tugas_2.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.annotation.NonNull
-import com.ksmandroid.android_tugas_2.adapter.HistoryListAdapter.CategoryViewHolder
-import java.util.*
-
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import com.ksmandroid.android_tugas_2.R
+import com.ksmandroid.android_tugas_2.items.HistoryItem
+import kotlinx.android.synthetic.main.item_match_history.view.*
 
-class HistoryListAdapter(var context: Context) :
-    RecyclerView.Adapter<CategoryViewHolder?>() {
-    var listFruit: ArrayList<Fruit>? = null
+class HistoryAdapter(private val items: List<HistoryItem>) :
+    RecyclerView.Adapter<HistoryAdapter.MainViewHolder>() {
 
-    @NonNull
-    fun onCreateViewHolder(@NonNull viewGroup: ViewGroup, i: Int): CategoryViewHolder {
-        val itemRow: View = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_match_history, viewGroup, false)
-        return CategoryViewHolder(itemRow)
+    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MainViewHolder =
+        MainViewHolder(LayoutInflater.from(p0.context).inflate(R.layout.item_match_history, p0, false))
+
+    override fun getItemCount() = items.size
+
+    override fun onBindViewHolder(p0: MainViewHolder, p1: Int) {
+        p0.bind(items.get(p1), p1 + 1)
     }
 
-    fun onBindViewHolder(@NonNull categoryViewHolder: CategoryViewHolder, i: Int) {
-        categoryViewHolder.tvName.setText(listFruit!![i].getName())
-        categoryViewHolder.tvComposition.setText(listFruit!![i].getComposition())
-        Glide.with(context)
-            .load(listFruit!![i].getPhoto())
-            .apply(RequestOptions().override(55, 55))
-            .into(categoryViewHolder.imgPhoto)
-    }
-
-    val itemCount: Int
-        get() = listFruit!!.size
-
-    inner class CategoryViewHolder internal constructor(@NonNull itemView: View) :
-        RecyclerView.ViewHolder(itemView) {
-        var tvName: TextView
-        var tvComposition: TextView
-        var imgPhoto: ImageView
-
-        init {
-            tvName = itemView.findViewById(R.id.tv_item_name)
-            tvComposition = itemView.findViewById(R.id.tv_item_composition)
-            imgPhoto = itemView.findViewById(R.id.img_item_photo)
+    inner class MainViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+        fun bind(item: HistoryItem, i: Int) {
+            //view.iv_profile.image = "$i"
+            view.tv_match_kill.text = item.name
+            view.tv_match_deaths.text = item.description
         }
     }
 }
