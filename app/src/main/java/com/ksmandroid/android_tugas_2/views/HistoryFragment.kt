@@ -28,6 +28,7 @@ class HistoryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         list.add(HistoryItem("13", "3"))
         list.add(HistoryItem("21", "4"))
         list.add(HistoryItem("9", "1"))
@@ -39,6 +40,7 @@ class HistoryFragment : Fragment() {
 
         rv_match_history.setHasFixedSize(true)
         rv_match_history.layoutManager = LinearLayoutManager(activity)
+
         val adapter = HistoryAdapter(list)
         rv_match_history.adapter = adapter
     }

@@ -22,9 +22,8 @@ class HistoryAdapter(private val items: List<HistoryItem>) :
 
     inner class MainViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         fun bind(item: HistoryItem, i: Int) {
-            //view.iv_profile.image = "$i"
-            view.tv_match_kill.text = item.name
-            view.tv_match_deaths.text = item.description
+            view.tv_match_kill.text = item.killcount
+            view.tv_match_deaths.text = item.deathcount
         }
     }
 }
