@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bnv_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/bnv_home"
+        android:checked="true"/>
+    <item
+        android:id="@+id/bnv_match_history"
+        android:icon="@drawable/ic_legendary"
+        android:title="@string/bnv_history" />
+    <item
+        android:id="@+id/bnv_inventory"
+        android:icon="@drawable/ic_inventory"
+        android:title="@string/bnv_inventory"/>
+    <item
+        android:id="@+id/bnv_spartan_profile"
+        android:icon="@drawable/ic_spartan"
+        android:title="@string/bnv_spartan" />
+</menu>

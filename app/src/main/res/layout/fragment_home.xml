@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home"
+    tools:context=".views.HomeFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/product_sans_medium"
+        android:text="@string/home_title"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_rectangle_dark_transparent_curved"
+        android:fontFamily="@font/product_sans_medium"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_home"
+        app:queryHint="@string/home_search" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_feeds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_rectangle_dark_transparent_curved"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sv_home">
+
+        <ImageView
+            android:id="@+id/home_feed_img1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/bg_halo4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_feed_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="Halo 4 is Out On PC"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/home_feed_img1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_feed_subtext1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="@string/home_text1"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/home_feed_img1"
+            app:layout_constraintTop_toBottomOf="@id/home_feed_text1" />
+
+        <ImageView
+            android:id="@+id/home_feed_img2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/bg_feed3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_feed_img1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_feed_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="Minor Bug Fixes"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/home_feed_img2"
+            app:layout_constraintTop_toBottomOf="@id/home_feed_img1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_feed_subtext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="@string/home_text2"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/home_feed_img2"
+            app:layout_constraintTop_toBottomOf="@id/home_feed_text2" />
+
+        <ImageView
+            android:id="@+id/home_feed_img3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/bg_feed2"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_feed_img2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_feed_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="Upcoming Maps"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/home_feed_img3"
+            app:layout_constraintTop_toBottomOf="@id/home_feed_img2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_feed_subtext3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="@string/home_text3"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/home_feed_img3"
+            app:layout_constraintTop_toBottomOf="@id/home_feed_text3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_rectangle_dark_transparent_curved"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_feeds">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_activity_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="Online Friends"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_activity_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="Active Users"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/home_activity_text3"
+            app:layout_constraintStart_toEndOf="@id/home_activity_text1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_activity_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="New Posts"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_activity_subtext1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="31"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/home_activity_text1"
+            app:layout_constraintStart_toStartOf="@id/home_activity_text1"
+            app:layout_constraintTop_toBottomOf="@id/home_activity_text1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_activity_subtext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="62127"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/home_activity_text2"
+            app:layout_constraintStart_toStartOf="@id/home_activity_text2"
+            app:layout_constraintTop_toBottomOf="@id/home_activity_text2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_activity_subtext3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="1021"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/home_activity_text3"
+            app:layout_constraintStart_toStartOf="@id/home_activity_text3"
+            app:layout_constraintTop_toBottomOf="@id/home_activity_text3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
