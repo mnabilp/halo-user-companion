@@ -64,7 +64,9 @@
     <string name="new_posts">New Posts</string>
     <string name="_62127">62127</string>
     <string name="_1021">1021</string>
-    <string name="kills">Kills</string>
-    <string name="deaths">Deaths</string>
+    <string name="kills">Kill</string>
+    <string name="deaths">Death</string>
     <string name="_31">31</string>
+    <string name="assists">Assist</string>
+    <string name="score">Score</string>
 </resources>

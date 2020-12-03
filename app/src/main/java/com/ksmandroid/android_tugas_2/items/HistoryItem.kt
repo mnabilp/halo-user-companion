@@ -1,6 +1,8 @@
 package com.ksmandroid.android_tugas_2.items
 
 data class HistoryItem(
-    val killcount: String? = null,
-    val deathcount: String? = null
+    val killCount: String? = null,
+    val deathCount: String? = null,
+    val assistCount: String? = null,
+    val score: String? = null
 )

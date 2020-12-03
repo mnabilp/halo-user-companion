@@ -18,30 +18,30 @@ class HistoryFragment : Fragment() {
     private lateinit var adapter: HistoryAdapter
     private val list = ArrayList<HistoryItem>()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_history, container, false)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        list.add(HistoryItem("13", "3"))
-        list.add(HistoryItem("21", "4"))
-        list.add(HistoryItem("9", "1"))
-        list.add(HistoryItem("4", "2"))
-        list.add(HistoryItem("5", "2"))
-        list.add(HistoryItem("7", "0"))
-        list.add(HistoryItem("11", "5"))
-        list.add(HistoryItem("14", "4"))
+        list.add(HistoryItem("13", "3", "25", "2416"))
+        list.add(HistoryItem("21", "4", "13", "2528"))
+        list.add(HistoryItem("9", "1", "9", "1216"))
+        list.add(HistoryItem("4", "2", "8", "1616"))
+        list.add(HistoryItem("5", "2", "3", "946"))
+        list.add(HistoryItem("7", "0", "4", "1220"))
+        list.add(HistoryItem("11", "5", "17", "2216"))
+        list.add(HistoryItem("14", "4", "15", "2322"))
 
         rv_match_history.setHasFixedSize(true)
         rv_match_history.layoutManager = LinearLayoutManager(activity)
 
         val adapter = HistoryAdapter(list)
         rv_match_history.adapter = adapter
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_history, container, false)
     }
 }

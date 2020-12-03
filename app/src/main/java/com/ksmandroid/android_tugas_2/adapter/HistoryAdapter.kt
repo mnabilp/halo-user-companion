@@ -17,13 +17,15 @@ class HistoryAdapter(private val items: List<HistoryItem>) :
     override fun getItemCount() = items.size
 
     override fun onBindViewHolder(p0: MainViewHolder, p1: Int) {
-        p0.bind(items.get(p1), p1 + 1)
+        p0.insert(items.get(p1), p1 + 1)
     }
 
     inner class MainViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        fun bind(item: HistoryItem, i: Int) {
-            view.tv_match_kill.text = item.killcount
-            view.tv_match_deaths.text = item.deathcount
+        fun insert(item: HistoryItem, i: Int) {
+            view.tv_match_kill.text = item.killCount
+            view.tv_match_death.text = item.deathCount
+            view.tv_match_assist.text = item.assistCount
+            view.tv_match_score.text = item.score
         }
     }
 }
